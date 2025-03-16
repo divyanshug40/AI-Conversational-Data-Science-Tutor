@@ -26,12 +26,13 @@ st.title("Chat with LLaMA2")
 # Add a chat history container
 if 'messages' not in st.session_state:
     st.session_state.messages = []
+    st.success("Session state initialized!")
 else:
     st.success("Session state loaded successfully!")
 
 # Initialize the pipeline
 pipe = pipeline("text-generation", model="meta-llama/Llama-2-7b-chat-hf",device=0 if torch.cuda.is_available() else -1)        
-
+st.success("Pipeline initialized successfully!")
 # Function to display the chat
 def display_chat():
     for message in st.session_state.messages:
