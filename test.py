@@ -4,6 +4,7 @@ import torch
 
 from huggingface_hub import login
 from dotenv import load_dotenv
+load_dotenv()
 import os
 h_token = os.getenv("hf_token")
 
