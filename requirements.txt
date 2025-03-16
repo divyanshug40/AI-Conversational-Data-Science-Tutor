@@ -1,4 +1,5 @@
 streamlit
+tensorflow
 transformers
 huggingface_hub
 dotenv
