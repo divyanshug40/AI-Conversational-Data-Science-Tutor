@@ -2,6 +2,8 @@ import streamlit as st
 from transformers import pipeline
 import torch
 
+st.set_page_config(page_title="Chat with LLaMA", page_icon=":robot:", layout="wide")
+
 from huggingface_hub import login
 from dotenv import load_dotenv
 load_dotenv()
@@ -16,7 +18,7 @@ else:
 login(token=h_token)
 
 # Set up the Streamlit page
-st.set_page_config(page_title="Chat with LLaMA", page_icon=":robot:", layout="wide")
+
 
 # Title
 st.title("Chat with LLaMA2")
