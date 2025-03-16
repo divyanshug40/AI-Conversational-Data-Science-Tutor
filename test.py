@@ -10,6 +10,8 @@ h_token = os.getenv("hf_token")
 
 if h_token is None:
     st.error("Please set your Hugging Face token in a .env file.")
+else:
+    st.success("Hugging Face token loaded successfully!")
 
 login(token=h_token)
 
@@ -22,6 +24,8 @@ st.title("Chat with LLaMA2")
 # Add a chat history container
 if 'messages' not in st.session_state:
     st.session_state.messages = []
+else:
+    st.success("Session state loaded successfully!")
 
 # Initialize the pipeline
 pipe = pipeline("text-generation", model="meta-llama/Llama-2-7b-chat-hf",device=0 if torch.cuda.is_available() else -1)        
