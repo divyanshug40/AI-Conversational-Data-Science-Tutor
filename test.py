@@ -3,7 +3,7 @@ from transformers import pipeline
 import torch
 
 from huggingface_hub import login
-login(token="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")
+login(token="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")
 
 # Set up the Streamlit page
 st.set_page_config(page_title="Chat with LLaMA", page_icon=":robot:", layout="wide")
