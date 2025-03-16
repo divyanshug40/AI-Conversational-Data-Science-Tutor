@@ -1,6 +1,6 @@
 streamlit
 tensorflow
 torch
-transformers
+transformers==4.28.0
 huggingface_hub
 dotenv
