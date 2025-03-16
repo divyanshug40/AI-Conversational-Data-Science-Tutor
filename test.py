@@ -8,6 +8,9 @@ load_dotenv()
 import os
 h_token = os.getenv("hf_token")
 
+if h_token is None:
+    st.error("Please set your Hugging Face token in a .env file.")
+
 login(token=h_token)
 
 # Set up the Streamlit page
