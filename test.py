@@ -1,5 +1,6 @@
 import streamlit as st
 from transformers import pipeline
+import torch
 
 from huggingface_hub import login
 from dotenv import load_dotenv
@@ -23,7 +24,7 @@ if 'messages' not in st.session_state:
     st.session_state.messages = []
 
 # Initialize the pipeline
-pipe = pipeline("text-generation", model="meta-llama/Llama-2-7b-chat-hf",device=-1)          
+pipe = pipeline("text-generation", model="meta-llama/Llama-2-7b-chat-hf",device=0 if torch.cuda.is_available() else -1)        
 
 # Function to display the chat
 def display_chat():
