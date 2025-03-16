@@ -1,6 +1,5 @@
 import streamlit as st
 from transformers import pipeline
-import torch
 
 from huggingface_hub import login
 from dotenv import load_dotenv
@@ -17,7 +16,7 @@ login(token=h_token)
 st.set_page_config(page_title="Chat with LLaMA", page_icon=":robot:", layout="wide")
 
 # Title
-st.title("Chat with LLaMA")
+st.title("Chat with LLaMA2")
 
 # Add a chat history container
 if 'messages' not in st.session_state:
