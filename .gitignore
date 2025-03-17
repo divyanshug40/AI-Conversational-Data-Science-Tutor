@@ -1,5 +1,5 @@
 .env
 .env_temp
-chat_history
+
 llm_config.py
 tutor.py

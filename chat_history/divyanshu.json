@@ -1,0 +1,82 @@
+[
+    {
+        "user": "what is data?",
+        "ai": "Data refers to raw, unorganized facts and figures that are typically numerical or textual.  It's the basic building block of information.  Think of it as the ingredients before they're cooked into a delicious meal.  In data science, we work with data to extract meaning and insights."
+    },
+    {
+        "user": "what is my name?",
+        "ai": "I am unable to answer that question. Please ask something related to data science."
+    },
+    {
+        "user": "my name is divyanshu",
+        "ai": "Nice to meet you, Divyanshu!  How can I help you today?"
+    },
+    {
+        "user": "what is my name",
+        "ai": "I am unable to answer that question. Please ask something related to data science."
+    },
+    {
+        "user": "what is my name?",
+        "ai": "I am unable to answer that question. Please ask something related to data science."
+    },
+    {
+        "user": "what is my name ",
+        "ai": "I am unable to answer that question. Please ask something related to data science."
+    },
+    {
+        "user": "my name is dicvyanshu",
+        "ai": "Nice to meet you, Dicvyanshu!  How can I help you today?"
+    },
+    {
+        "user": "what is my name",
+        "ai": "I am unable to answer that question. Please ask something related to data science."
+    },
+    {
+        "user": "what are data science questions i asked",
+        "ai": "I'm sorry, but I do not have memory of past conversations.  To help me answer your question, please rephrase it to ask specifically about data science concepts or techniques you'd like clarification on."
+    },
+    {
+        "user": "hello, what do you know about previous chats?",
+        "ai": "Hello!  This is our first chat, so there's no previous chat history to summarize.  How can I help you today?"
+    },
+    {
+        "user": "what is my name",
+        "ai": "I am unable to answer that question. Please ask something related to data science."
+    },
+    {
+        "user": "my namw is divyanshu",
+        "ai": "Nice to meet you, Divyanshu!  How can I help you today?"
+    },
+    {
+        "user": "what is linear regression",
+        "ai": "Linear regression is a fundamental statistical method used in data science to model the relationship between a dependent variable and one or more independent variables.  It assumes a linear relationship, meaning the change in the dependent variable is proportional to the change in the independent variables.  The goal is to find the best-fitting straight line (or hyperplane in multiple linear regression) that minimizes the difference between the predicted values and the actual values of the dependent variable.  This is often done using the method of least squares."
+    },
+    {
+        "user": "explain in more deai",
+        "ai": "I'm sorry, I need more context.  Explain what you'd like me to explain in more detail.  Please provide the topic or question."
+    },
+    {
+        "user": "what is my name",
+        "ai": "I am unable to answer that question. Please ask something related to data science."
+    },
+    {
+        "user": "do you remember last question",
+        "ai": "Our last conversation didn't involve any questions.  We just started chatting.  Is there anything I can help you with today?"
+    },
+    {
+        "user": "hi",
+        "ai": "Hi there! How can I help you today?"
+    },
+    {
+        "user": "my name is d",
+        "ai": "Nice to meet you, d!  How can I help you today?"
+    },
+    {
+        "user": "rewite my name",
+        "ai": "I am unable to answer that question. Please ask something related to data science."
+    },
+    {
+        "user": "what is my name",
+        "ai": "I am unable to answer that question. Please ask something related to data science."
+    }
+]
