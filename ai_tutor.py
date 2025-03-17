@@ -52,7 +52,7 @@ st.set_page_config(page_title="Data Science Tutor",page_icon=":bar_chart:",layou
 if "login" not in st.session_state:
     st.session_state.login = False
 
-
+ 
 if not st.session_state.login:
     st.title("🤖 Data Science Tutor")
     username=st.text_input(label="Enter your username")
@@ -87,7 +87,7 @@ I’m here to help you with all things related to **Data Science** and **AI**. W
 - Python for Data Science
              
 And much more!\n
-Feel free to type your questions and let’s explore the world of data science together! 🚀
+Feel free to type your questions and let’s explore the world of data science together!🚀
 """)
     if st.button("Delete Chat History"):
         delete_chat_history(st.session_state.name)
