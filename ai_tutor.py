@@ -8,8 +8,8 @@ from langchain_core.runnables import RunnableLambda,RunnablePassthrough
 
 from langchain_core.prompts import ChatPromptTemplate , MessagesPlaceholder
 from langchain_core.output_parsers import StrOutputParser
-from langchain_community.chat_message_histories import SQLChatMessageHistory 
-from langchain_core.runnables.history import RunnableWithMessageHistory
+#from langchain_community.chat_message_histories import SQLChatMessageHistory 
+#from langchain_core.runnables.history import RunnableWithMessageHistory
 import os
 from dotenv import load_dotenv
 
