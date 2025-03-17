@@ -74,9 +74,9 @@ If no previous chat history exists for a user, a new session is started, and the
 ```bash
 Data-Science-Tutor/
 │
-├── app.py                # Main Streamlit app
+├── ai_tutor.py           # Main Streamlit app
 ├── .env                  # Environment file to store API key
-├── chat_history/         # Directory where chat history JSON files are stored
+├── chat_history/         # Directory where chat history JSON files are stored 
 ├── requirements.txt      # Python dependencies
 └── README.md             # This file
 ```
@@ -90,4 +90,3 @@ Data-Science-Tutor/
 ## Troubleshooting
 
 - If you encounter an error with the API key, make sure the `.env` file contains the correct API key, and the key is properly loaded using `dotenv`.
-- If there are issues with chat history, ensure that the `chat_history/` directory exists and is accessible for reading and writing files.
