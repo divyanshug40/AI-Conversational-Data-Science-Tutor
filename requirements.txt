@@ -1,6 +1,5 @@
 streamlit
-tensorflow
-torch
-transformers
-huggingface_hub
-dotenv
+google-generativeai
+langchain
+langchain-google-genai
+python-dotenv

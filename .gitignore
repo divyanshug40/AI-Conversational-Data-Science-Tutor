@@ -1,4 +1,5 @@
-tutor.py
-.env_temp
-test2.py
 .env
+.env_temp
+chat_history
+llm_config.py
+tutor.py
