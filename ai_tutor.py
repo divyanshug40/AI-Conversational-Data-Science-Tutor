@@ -96,14 +96,13 @@ chat_model = ChatGoogleGenerativeAI(model="gemini-1.5-flash", google_api_key=api
 # Prompt Tempate
 chat_prompt = ChatPromptTemplate(
         messages=[
-            ("system","""You are an AI tutor for data science. 
+            ("system","""You are a helpful AI tutor for data science. 
                 - You are chatting with a user who is asking a question. 
                 - Reply normally if user is making an introduction.
                 - If the user asks a question,check if the following question is **strictly** related to data science.
-                - If it is, reply with the answer.
+                - If it is, reply with the answer in details using examples and explanations.
                 - If it is not, reply with "I am unable to answer that question. Please ask something related to data science."
-                - Use previous chat history into consideration.
-                - Give brief summary of previous chats
+
              
              """),
              MessagesPlaceholder(variable_name="history"),
