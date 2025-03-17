@@ -1,8 +1,8 @@
-# Data Science Tutor - AI Chatbot
+# Data Science Tutor - AI Chatbot 🤖
 
 This project is a **Data Science AI Tutor** built using **Streamlit**, **Google Generative AI**, and **Langchain**. The application allows users to interact with an AI tutor that answers questions related to data science, such as machine learning, data visualization, AI algorithms, and more.
 
-## Features
+## Features ✨
 
 - **Login**: Users can log in by providing a username, and their chat history is saved for future sessions.
 - **Chat History**: The application saves and retrieves the chat history specific to each user.
@@ -11,7 +11,7 @@ This project is a **Data Science AI Tutor** built using **Streamlit**, **Google 
 - **Delete Chat History**: Users can delete their chat history at any time.
 - **AI Responses**: The AI will only answer questions strictly related to data science. If the question is not related, it will politely ask the user to ask a data science-related question.
 
-## Requirements
+## Requirements 📦
 
 ### Python Packages
 
@@ -29,7 +29,7 @@ You can install the required libraries by running:
 pip install -r requirements.txt
 ```
 
-### Google API Key Setup
+### Google API Key Setup 🔑
 
 To use the Google Generative AI service, you need to set up a **Google API key**. Follow these steps:
 
@@ -42,7 +42,7 @@ To use the Google Generative AI service, you need to set up a **Google API key**
 google_token=YOUR_GOOGLE_API_KEY_HERE
 ```
 
-## Usage
+## Usage 🚀
 
 ### Starting the Application
 
@@ -55,7 +55,7 @@ google_token=YOUR_GOOGLE_API_KEY_HERE
 
 This will start the Streamlit app, and you can access the application in your browser.
 
-### User Flow
+### User Flow 🧑‍💻
 
 1. **Login**: Enter your username to start a new session. The application will load your previous chat history if available.
 2. **Chat**: Ask questions related to data science in the chatbox. The AI will respond accordingly. Only data science-related questions will be answered.
@@ -63,13 +63,13 @@ This will start the Streamlit app, and you can access the application in your br
     * **Delete**: If you want to clear your chat history, click on the "Delete Chat History" button.
     * **Download**: You can download your chat history as a `.txt` file by clicking the "Download Chat History" button.
 
-### Chat History Storage
+### Chat History Storage 💾
 
 The application stores each user's chat history in a JSON file inside the `chat_history/` directory. The chat history is saved whenever a user interacts with the AI. Each entry in the history includes both the user's input and the AI's response.
 
 If no previous chat history exists for a user, a new session is started, and the history is initialized as empty.
 
-## Project Structure
+## Project Structure 📂
 
 ```bash
 Data-Science-Tutor/
@@ -81,12 +81,12 @@ Data-Science-Tutor/
 └── README.md             # This file
 ```
 
-## Future Enhancements
+## Future Enhancements 🔮
 
 - **User Authentication**: Implement more robust user authentication and session management.
 - **Advanced AI Capabilities**: Integrate additional advanced data science tools for richer responses.
 - **Data Science Resources**: Provide additional resources, such as tutorials or recommended readings, directly in the chat.
 
-## Troubleshooting
+## Troubleshooting 🛠️
 
 - If you encounter an error with the API key, make sure the `.env` file contains the correct API key, and the key is properly loaded using `dotenv`.
