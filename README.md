@@ -26,7 +26,8 @@ The following Python libraries are required to run the application:
 You can install the required libraries by running:
 
 ```bash
-pip install -r requirements.txt```
+pip install -r requirements.txt
+```
 
 ### Google API Key Setup
 
@@ -38,7 +39,8 @@ To use the Google Generative AI service, you need to set up a **Google API key**
 4. Create a `.env` file in the root directory of the project and add your API key like this:
 
 ```plaintext
-google_token=YOUR_GOOGLE_API_KEY_HERE```
+google_token=YOUR_GOOGLE_API_KEY_HERE
+```
 
 ## Usage
 
