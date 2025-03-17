@@ -4,12 +4,8 @@ import json
 import google.generativeai as genai
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.runnables import RunnableLambda,RunnablePassthrough
-
-
 from langchain_core.prompts import ChatPromptTemplate , MessagesPlaceholder
 from langchain_core.output_parsers import StrOutputParser
-#from langchain_community.chat_message_histories import SQLChatMessageHistory 
-#from langchain_core.runnables.history import RunnableWithMessageHistory
 import os
 from dotenv import load_dotenv
 
@@ -23,6 +19,32 @@ def get_chat_history(username):
 def save_chat_history(username): 
     with open(f"chat_history/{username}.json", "w") as hfile:
         json.dump(st.session_state.chat_history, hfile, indent=4)
+
+def delete_chat_history(username):
+    try:
+        os.remove(f"chat_history/{username}.json")
+        st.session_state.chat_history = []
+        st.success("Chat history deleted successfully.")
+    except FileNotFoundError:
+        st.error("No chat history found to delete.")
+
+def download_chat_history(username):
+    chat_history = get_chat_history(username)
+    if chat_history:
+        # Prepare the chat history in a readable format for the .txt file
+        chat_text = ""
+        for chat in chat_history:
+            chat_text += f"User: {chat['user']}\nAI: {chat['ai']}\n\n"
+
+        # Provide the option to download the chat history as a .txt file
+        st.download_button(
+            label="Download Chat History as TXT",
+            data=chat_text,
+            file_name=f"{username}_chat_history.txt",
+            mime="text/plain"
+        )
+    else:
+        st.warning("No chat history available to download.")
 
 
 st.set_page_config(page_title="Data Science Tutor",page_icon=":bar_chart:",layout="centered")
@@ -53,23 +75,27 @@ if not st.session_state.login:
     
 username = st.session_state.name
 with st.sidebar:
-    st.title("🤖 Data Science Tutor")
+    st.write("# 🤖 Data Science Tutor")
     st.write(f"Hello {username.title()}!! 🎉🎉🎉")
-    st.write(""" Welcome to the Data Science AI Tutor 🤖
+    st.write("""#### Welcome to the Data Science AI Tutor 🤖
+
 I’m here to help you with all things related to **Data Science** and **AI**. Whether you're a beginner or an expert, ask me anything about:
 - Machine Learning
 - Data Analysis
 - AI Algorithms
 - Data Visualization
 - Python for Data Science
-- And much more!
-
+             
+And much more!\n
 Feel free to type your questions and let’s explore the world of data science together! 🚀
 """)
+    if st.button("Delete Chat History"):
+        delete_chat_history(st.session_state.name)
 
+    # Button to download chat history as TXT
+    download_chat_history(st.session_state.name)
+    
 
-
-#st.title("🤖 Data Science Tutor")
 
 if not get_chat_history(username):
     st.chat_message("assistant").write("Feel free to ask anything regarding **data science**!")
@@ -90,7 +116,6 @@ if not api_key:
     st.stop()
 
 # Initialize Google API and AI Model
-#genai.configure(api_key=api_key)
 chat_model = ChatGoogleGenerativeAI(model="gemini-1.5-flash", google_api_key=api_key)
 
 # Prompt Tempate
@@ -115,6 +140,7 @@ output_parser = StrOutputParser()
 runnable_get_history = RunnableLambda(get_chat_history)
 
 chain = RunnablePassthrough.assign(history= runnable_get_history) | chat_prompt | chat_model | output_parser
+
 
 # Chat Input
 user_input = st.chat_input("Type your data science question...")
