@@ -8,6 +8,8 @@ Built using cutting-edge technologies like **Streamlit**, **Google Generative AI
 
 Dive in, ask questions, and let the AI tutor help you become a data science pro! 🌟
 
+👉 [Start using the Data Science AI Tutor now!](https://ai-conversational-data-science-tutor-5qdwwxdvvzsegnknmau44b.streamlit.app/)
+
 ## Features ✨
 
 - **Login**: Users can log in by providing a username, and their chat history is saved for future sessions.
